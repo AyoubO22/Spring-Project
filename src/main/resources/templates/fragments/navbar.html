@@ -1,0 +1,16 @@
+<nav th:fragment="navbar" class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="/" th:text="#{navbar.home}">Accueil</a>
+    <div class="nav-items">
+        <ul>
+            <li><a href="/new" th:text="#{navbar.new}">Nouvel article</a></li>
+            <li><a href="/about" th:text="#{navbar.about}">À propos</a></li>
+        </ul>
+    </div>
+    <div class="lang-items">
+        <ul>
+            <li><a href="/changeLanguage?lang=en">EN</a></li>
+            <li><a href="/changeLanguage?lang=fr">FR</a></li>
+            <li><a href="/changeLanguage?lang=nl">NL</a></li>
+        </ul>
+    </div>
+</nav>

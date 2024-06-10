@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>About Us</title>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+<th:block th:include="fragments/navbar :: navbar"></th:block>
+<div class="container mt-3">
+    <h2 th:text="#{about.us}">About Us</h2>
+    <p><strong th:text="#{address}">Address</strong>: Fictional Street 123, 1000 Brussels, Belgium</p>
+    <p><strong th:text="#{email}">Email</strong>: contact@anderlechtsegazette.com</p>
+    <p><strong th:text="#{description}">Description</strong>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+</div>
+<footer class="text-center mt-4">
+    <p th:text="#{footer.copyright}">&copy; 2024 Anderlechtse Gazette</p>
+</footer>
+</body>
+</html>

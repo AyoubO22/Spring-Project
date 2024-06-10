@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Anderlechtse Gazette</title>
+<link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+<th:block th:include="fragments/navbar :: navbar"></th:block>
+<div class="container mt-3">
+    <h2 th:text="#{latest.articles}">Latest Articles</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th th:text="#{title}">Title</th>
+            <th th:text="#{reporter}">Reporter</th>
+            <th th:text="#{action}">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="article : ${articles}">
+            <td th:text="${article.name}"></td>
+            <td th:text="${article.reporterName}"></td>
+            <td><a th:href="@{/details/{id}(id=${article.id})}" th:text="#{details}">Details</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/new" class="btn btn-primary" th:text="#{add.new.article}">Add New Article</a>
+</div>
+<footer class="text-center mt-4">
+    <p th:text="#{footer.copyright}">&copy; 2024 Anderlechtse Gazette</p>
+</footer>
+</body>
+</html>
